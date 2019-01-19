@@ -1,20 +1,15 @@
 
-    <?php require ('partials/head.php'); ?>
+<?php require ('partials/head.php'); ?>
 
-    <form action="/names" method="get">
+<ul>
+    <?php foreach($users as $user): ?>
+        <li><?= $user->name ?></li>
+    <?php endforeach; ?>
+</ul>
+
+    <form action="/names" method="post">
         <input type="text" name="name">
         <input type="submit" value="submit">
     </form>
-<!--    <ul>-->
-<!--    --><?php //foreach ($tasks as $task):?>
-<!--        <li>-->
-<!--            --><?php //if($task->completed): ?>
-<!--                <strike> --><?//= $task->description ?><!-- </strike>-->
-<!--            --><?php //else: ?>
-<!--                --><?//= $task->description ?>
-<!--            --><?php //endif; ?>
-<!--        </li>-->
-<!--        --><?php //endforeach; ?>
-<!--    </ul>-->
 
-    <?php require ('partials/footer.php'); ?>
+<?php require ('partials/footer.php'); ?>
