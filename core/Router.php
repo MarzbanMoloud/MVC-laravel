@@ -1,10 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Marzban
- * Date: 1/19/2019
- * Time: 11:03 AM
- */
+
+namespace App\Core;
 
 class Router
 {
@@ -45,7 +41,9 @@ class Router
 
     protected function callAction($controller , $action)
     {
+        $controller = "App\\Controllers\\{$controller}";
         $controller = new $controller;
+
         if(! method_exists($controller , $action)){
             throw new Exception("{$controller} does not respond to the {$action} action.");
         }

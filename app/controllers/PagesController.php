@@ -1,10 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Marzban
- * Date: 1/19/2019
- * Time: 3:31 PM
- */
+
+namespace App\Controllers;
 
 class PagesController
 {
