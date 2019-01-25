@@ -32,7 +32,7 @@ class Router
 //            return $this->routes[$requestType][$uri];
             //PagesController@home
             $this->callAction(
-                ...explode('@' , $this->routes[$requestType][$uri])
+                ...explode('@' , $this->routes[$requestType][$uri]) //???
             );
         }
 
